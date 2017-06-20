@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+"# breakthemeta1"  git init git add README.md git commit -m "first commit" git remote add origin https://github.com/clokk/breakthemeta1.git git push -u origin master
