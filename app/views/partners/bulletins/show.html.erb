@@ -1,0 +1,15 @@
+<hr>
+
+<h3><%= @bulletin.name %></h3>
+
+<p><%= @bulletin.description %></p>
+
+<h4>Bulletin created at: <%= @bulletin.created_at %></h4>
+
+<% if @bulletin.created_at != @bulletin.updated_at %>
+  <h4> Bulletin updated at: <%= @bulletin.updated_at %></h4>
+<% end %>
+
+<%= link_to "Edit", edit_partner_bulletin_path(@bulletin.partner_id, @bulletin.id) %>
+
+<%= link_to "Back to Partners", partner_path(@bulletin.partner_id) %>

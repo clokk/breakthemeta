@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @partner.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @partner.description %>
+</p>
+
+<p>
+  <strong>Metaname:</strong>
+  <%= @partner.metaname %>
+</p>
+<%= link_to 'Edit', edit_partner_path(@partner) %> |
+<%= link_to 'Back', partners_path %>
+
+<hr>
+
+<h2>Bulletins for Partners</h2>
+
+<% @bulletins.each do |bulletin| %>
+
+  <p><%= link_to bulletin.name, partner_bulletin_path(@partner.id, bulletin.id) %></p>
+
+<% end %>
+
+<%= link_to "Add a new Bulletin for this Partner", new_partner_bulletin_path(partner_id: @partner.id) %>

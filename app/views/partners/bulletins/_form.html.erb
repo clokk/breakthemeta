@@ -1,0 +1,18 @@
+<%= form_for [@partner, @bulletin] do |f| %>
+  <% if @bulletin.errors.any? %>
+  	<%= pluralize(@bulletin.errors.count, "error") %> prohibited this bulletin from being saved:
+
+  	<% @bulletin.errors.full_messages.each do |message| %>
+  	  <%= message %>
+  	<% end %>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+
+ <% end %>
