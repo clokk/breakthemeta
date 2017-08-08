@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @partner.name %>
-</p>
+<h2>
+  <strong><%= @partner.name %>'s Page</strong>
+</h2>
 
 <p>
   <strong>Description:</strong>
@@ -19,7 +18,7 @@
 
 <hr>
 
-<h2>Bulletins for Partners</h2>
+<h2>Featured Posts from <%= @partner.name %></h2>
 
 <% @bulletins.each do |bulletin| %>
 
