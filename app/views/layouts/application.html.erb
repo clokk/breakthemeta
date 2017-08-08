@@ -9,13 +9,17 @@
   </head>
 
   <body>
-  	<div class="logo">
-  		<%= image_tag("logos/btm logo.png", width: '150px') %>
-  	</div>
 
   	<%= render 'shared/nav' %>
     <%= render 'shared/alerts' %>
 
-    <%= yield %>
+    <div class="row collapse">
+      <div class="small-12 small-centered medium-8 medium-centered large-5 large-centered columns">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render 'shared/footer' %>
+
   </body>
 </html>
