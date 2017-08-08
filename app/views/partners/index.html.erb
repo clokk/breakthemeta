@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Partners</h1>
+<h2 class="page-title">Partners</h2>
 
 <table>
   <thead>
@@ -16,8 +16,7 @@
   <tbody>
     <% @partners.each do |partner| %>
       <tr>
-        <td><%= link_to partner.name, partner %></td>
-        <td><%= link_to image_tag("gifs/gabe1.gif", width:'100px'), partner%></td>
+        <td><%= link_to partner.name, partner, class: "row"%></td>
         <td><%= partner.description %></td>
         <td><%= partner.metaname %></td>
         <td><%= link_to 'Show', partner %></td>
@@ -27,6 +26,8 @@
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 
